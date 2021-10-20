@@ -6,14 +6,14 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            int cou=0;
             int a = Convert.ToInt32(Console.ReadLine());
             for (int i=1; i<=a; i++)
             {
                 for (int j = 1; j <= i; j++)
                 {
-                    Console.WriteLine("*");
+                    Console.Write("*");
                 }
+                Console.WriteLine();
             }
         }
     }
