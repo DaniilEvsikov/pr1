@@ -1,0 +1,24 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i=2; i<=6; i++)
+            {
+                for (int j = 1; j <= 6; j++)
+                {
+                    Console.Write(i);
+                    Console.Write("*");
+                    Console.Write(j);
+                    Console.Write("=");
+                    Console.Write(i * j);
+                    Console.WriteLine();
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
