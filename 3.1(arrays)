@@ -1,0 +1,25 @@
+using System;
+
+namespace _1._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N = Convert.ToInt32(Console.ReadLine());
+            int mi = 0;
+            var a = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+            for (int i =0; i <N; i++)
+            {
+                if(i%2!=0)
+                {
+                    mi += a[i];
+                }
+                Console.Write(a[i]);
+                Console.Write(" ");
+            }
+            Console.WriteLine();
+            Console.WriteLine(mi);
+        }
+    }
+}
