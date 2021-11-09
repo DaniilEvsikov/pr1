@@ -1,0 +1,52 @@
+using System;
+
+namespace _1._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N = Convert.ToInt32(Console.ReadLine());
+            int mi = 0;
+            int j = 0;
+            int k = 0;
+            var a = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+            for (int i =0; i <N; i++)
+            {
+                if(a[i]<0)
+                {
+                    mi++;
+                }
+            }
+            int[] b = new int[mi];
+            int[] c = new int[N-mi];
+            for (int i = 0; i < N; i++)
+            {
+                if (a[i] < 0)
+                {
+                    b[j] = a[i];
+                    j++;
+                }
+                else
+                {
+                    c[k] = a[i];
+                    k++;
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("Положительные:");
+            for (int i = 0; i < N-mi; i++)
+            {
+                Console.Write(c[i]);
+                Console.Write(" ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Отрицательные:");
+            for (int i = 0; i < mi; i++)
+            {
+                Console.Write(b[i]);
+                Console.Write(" ");
+            }
+        }
+    }
+}
