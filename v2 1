@@ -1,0 +1,36 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x = Convert.ToDouble(Console.ReadLine());
+            double y = Convert.ToDouble(Console.ReadLine());
+            double z = Convert.ToDouble(Console.ReadLine());
+            if (x*x==y*y+z*z)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                if (y * y == x * x + z * z)
+                {
+                    Console.WriteLine("Yes");
+                }
+                else
+                {
+                    if (z * z == x * x + y * y)
+                    {
+                        Console.WriteLine("Yes");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No");
+                    }
+                }
+            }
+        }
+    }
+}
